@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { actions } from "../../reducers/frontReducer"
 // import reactRenderer from 'remark-react'
-import style from './style.css'
+import './style.css'
 
 const { get_article_detail } = actions;
 
@@ -18,11 +18,11 @@ class Detail extends Component {
   render() {
     const { title, author, viewCount, commentCount, time } = this.props;
     return (
-      <div className={style.container}>
+      <div className="container">
         <h2>{title}</h2>
-        <div className={style.articleInfo}>
+        <div className="articleInfo">
           <span >
-            <img className={style.authorImg} src={require('./author.png')} alt="author" /> {author}
+            <img className="authorImg" src={require('./author.png')} alt="author" /> {author}
           </span>
           <span>
             <img src={require('./calendar.png')} alt="calendar" /> {time}

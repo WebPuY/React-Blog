@@ -4,7 +4,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {
   Redirect
 } from 'react-router-dom'
-import style from './style.css'
+import './style.css'
 import ArticleList from "./components/articelList/ArticleList";
 import { Pagination } from 'antd';
 import { connect } from 'react-redux'
@@ -27,13 +27,13 @@ class Home extends Component {
         ?
         <Redirect to='/404' />
         :
-        <div className={style.container}>
+        <div className="homeContainer">
           <ArticleList
             history={this.props.history}
             data={this.props.articleList}
             getArticleDetail={this.props.get_article_detail}
           />
-          <div className={style.paginationContainer}>
+          <div className="homePaginationContainer">
             <Pagination
               defaultPageSize={5}
               onChange={(pageNum) => {

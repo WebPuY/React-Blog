@@ -1,17 +1,17 @@
-.container {
+.loginContainer {
   background: #fff;
   display: flex;
   flex-direction: column;
   height: 300px;
 }
 
-.formStyle {
+.loginFormStyle {
   width: 70%;
   margin-left: 15%;
   text-align: center;
   padding-top: 20px;
 }
 
-.loginButton {
+.loginLoginButton {
   width: 60%;
 }

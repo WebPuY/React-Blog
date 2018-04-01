@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Input, Form, Icon, Button } from 'antd'
-import style from './style.css'
+import './style.css'
 
 const FormItem = Form.Item;
 
@@ -22,7 +22,7 @@ class LoginFormCom extends Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Form onSubmit={this.handleLogin} className={style.formStyle}>
+      <Form onSubmit={this.handleLogin} className="loginFormStyle">
         <FormItem>
           {getFieldDecorator('userName', {
             rules: [{ required: true, message: '请输入用户名!' }],
@@ -39,7 +39,7 @@ class LoginFormCom extends Component {
           )}
         </FormItem>
         <FormItem>
-          <Button className={style.loginButton} type="primary" htmlType="submit">
+          <Button className="loginLoginButton" type="primary" htmlType="submit">
             登录
           </Button>
         </FormItem>

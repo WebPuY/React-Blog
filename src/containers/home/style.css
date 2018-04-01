@@ -1,11 +1,11 @@
-.container {
+.homeContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #eee;
 }
 
-.paginationContainer {
+.homePaginationContainer {
   text-align: center;
   margin: 30px 0;
 }

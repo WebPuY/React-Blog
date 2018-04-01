@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Menu } from 'antd'
-import style from './style.css'
+import './style.css'
 
 export default class Menus extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ export default class Menus extends Component {
         onClick={this.handleClick}
         selectedKeys={[this.state.current]}
         mode="horizontal"
-        className={style.MenuContainer}
+        className="MenuContainer"
       >
         {
           this.props.categories.map((item, index) => (

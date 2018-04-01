@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import style from './style.css'
+import './style.css'
 import {Tabs} from 'antd';
 import LoginForm from './LoginForm'
 import RegisterForm from "./RegisterForm";
@@ -12,11 +12,10 @@ export default class Login extends Component {
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this)
     }
 
-
     render() {
         const {login,register} = this.props;
         return (
-            <Tabs defaultActiveKey="1" tabBarStyle={{textAlign: 'center'}} className={style.container}>
+            <Tabs defaultActiveKey="1" tabBarStyle={{textAlign: 'center'}} className="loginContainer">
                 <TabPane tab="登录" key="1">
                     <LoginForm login={login}/>
                 </TabPane>

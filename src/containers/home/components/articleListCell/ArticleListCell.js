@@ -1,16 +1,16 @@
 import React from 'react'
-import style from './style.css'
+import './style.css'
 
 export const ArticleListCell = (props) => (
-  <div className={`${style.container} `} onClick={() => { props.history.push(`/detail/${props.data._id}`, { id: props.data._id }); props.getArticleDetail(props.data._id) }}>
+  <div className="container" onClick={() => { props.history.push(`/detail/${props.data._id}`, { id: props.data._id }); props.getArticleDetail(props.data._id) }}>
     <div>
       <img src={props.data.coverImg} alt="" />
     </div>
-    <div className={style.bottomContainer}>
-      <p className={style.title}>
+    <div className="bottomContainer">
+      <p className="title">
         {props.data.title}
       </p>
-      <p className={style.summary}>
+      <p className="summary">
         这里应该有摘要的，因为设计的数据库表表结构的时候忘记了，后面也是懒得加了，感觉太麻烦了，就算了
             </p>
       <div>
@@ -28,7 +28,7 @@ export const ArticleListCell = (props) => (
             {props.data.commentCount}
           </span>
         </p>
-        <span className={style.lastSpan}>
+        <span className="lastSpan">
           阅读全文 <span>》</span>
         </span>
       </div>

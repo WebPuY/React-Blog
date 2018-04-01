@@ -16,7 +16,7 @@ import { Logined } from "../home/components/logined/Logined";
 import { actions as IndexActions } from '../../reducers/index'
 import { Detail } from '../detail'
 import { Home } from '../home'
-import style from './style.css'
+import './style.css'
 
 const { get_all_tags } = actions;
 const { get_article_list } = FrontActinos;
@@ -30,16 +30,15 @@ class Front extends Component {
   render() {
     const { url } = this.props.match;
     const { login, register } = this.props;
-    console.log(style, 'style')
     return (
       <div>
         <div>
           {/* <Banner/> */}
           <Menus getArticleList={(tag) => this.props.get_article_list(tag, 1)} categories={this.props.categories} history={this.props.history} />
         </div>
-        <div className={style.container}>
-          <div className={style.contentContainer}>
-            <div className={style.content}>
+        <div className="frontContainer">
+          <div className="frontContentContainer">
+            <div className="frontContent">
               <Switch>
                 <Route exact path={url} component={Home} />
                 <Route path={`/detail/:id`} component={Detail} />
@@ -47,7 +46,7 @@ class Front extends Component {
                 <Route component={NotFound} />
               </Switch>
             </div>
-            <div className={`${style.loginContainer}`}>
+            <div className="frontLoginContainer">
               {this.props.userInfo.userId ?
                 <Logined history={this.props.history} userInfo={this.props.userInfo} /> :
                 <Login login={login} register={register} />}
