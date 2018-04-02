@@ -27,6 +27,7 @@
     "scss-loader": "^0.0.1"
   },
   "scripts": {
+    "eject": "react-scripts eject",
     "react-start": "react-scripts start",
     "start": "concurrently \"yarn react-start\" \"cd server && yarn start\"",
     "react-build": "react-scripts build",
